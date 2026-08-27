@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://coding.me.kr/sitemap.xml
+Sitemap: https://coding.me.kr/sitemap-areas.xml
