@@ -379,6 +379,14 @@
   .form-submit:hover{background:var(--cyan-dark);}
   .form-note{font-size:11.5px; color:#9a9dc2; margin-top:12px; text-align:center;}
 
+  /* ---------- News ---------- */
+  .news-grid{display:flex; flex-direction:column; gap:18px; max-width:760px; margin:0 auto;}
+  .news-card{background:var(--paper-2); border:1px solid var(--line); border-radius:12px; padding:28px 26px;}
+  .news-date{font-size:12px; font-weight:700; color:var(--cyan-dark); letter-spacing:0.04em; margin-bottom:10px;}
+  .news-card h3{font-size:16px; line-height:1.5; margin-bottom:10px; color:var(--ink);}
+  .news-card p{font-size:13.5px; color:var(--slate); line-height:1.75; margin-bottom:12px;}
+  .news-card a{font-size:12.5px; font-weight:700; color:var(--cyan-dark); text-decoration:underline;}
+
   /* ---------- FAQ ---------- */
   .faq-item{border-bottom:1px solid var(--line);}
   .faq-q{display:flex; justify-content:space-between; align-items:center; padding:22px 4px; cursor:pointer; font-size:15.5px; font-weight:700; color:var(--ink);}
@@ -449,6 +457,7 @@
       <a href="#process">진행 방식</a>
       <a href="#track-js">자바스크립트</a>
       <a href="#track-py">파이썬</a>
+      <a href="#news">뉴스</a>
       <a href="#faq">FAQ</a>
     </nav>
     <div class="nav-right">
@@ -463,6 +472,7 @@
     <a href="#process">진행 방식</a>
     <a href="#track-js">자바스크립트</a>
     <a href="#track-py">파이썬</a>
+    <a href="#news">뉴스</a>
     <a href="#faq">FAQ</a>
   </nav>
 </header>
@@ -658,6 +668,24 @@
   </div>
 </section>
 
+<section id="news">
+  <div class="wrap">
+    <div class="section-head center">
+      <div class="eyebrow-line"><span class="bar"></span><span>NEWS</span></div>
+      <h2>코딩·정보교육 뉴스</h2>
+      <p>학교 정보교육 정책과 코딩교육 관련 소식을 전해드립니다.</p>
+    </div>
+    <div class="news-grid">
+      <div class="news-card">
+        <div class="news-date">2026.07.03</div>
+        <h3>"AI 시대 초등 정보교육, 독립 교과화 필요" — 학교별 편차 문제 지적</h3>
+        <p>전자신문 기고에서 초등학교 정보교육이 현재 실과 교과 내 일부 영역으로만 편성돼 학교별 운영 편차가 크다는 문제가 제기됐습니다. 2026년 기준 초등 5~6학년에서 34시간 이상 정보수업이 운영 중이며, 한국정보교육학회는 유아부터 초등 6학년까지 컴퓨팅 시스템·데이터·알고리즘과 프로그래밍·인공지능·디지털 문화 5개 영역으로 구성된 체계적 교육과정을 개발했습니다.</p>
+        <a href="https://www.etnews.com/20260703000025" target="_blank" rel="noopener">전자신문에서 자세히 보기 →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="faq" style="background:var(--paper-2); border-top:1px solid var(--line);">
   <div class="wrap" style="max-width:840px; padding:0 32px;">
     <div class="section-head center">
@@ -710,6 +738,7 @@
         <a href="#process">진행 방식</a>
         <a href="#track-js">자바스크립트</a>
         <a href="#track-py">파이썬</a>
+        <a href="#news">뉴스</a>
         <a href="#faq">FAQ</a>
         <a href="/areas/">지역별 코딩과외</a>
       </div>
