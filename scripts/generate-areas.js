@@ -88,20 +88,49 @@ function header() {
 function footer() {
   return `<footer><p>© 2026 코딩미. All rights reserved. · <a href="/" style="color:var(--cyan-light);">홈으로</a></p></footer>`;
 }
+// Keep in sync with faqMini()'s visible Q&A - this schema must mirror what's
+// actually displayed on the page (Google structured data guideline).
+const FAQ_MINI_ITEMS = [
+  { q: '수업은 어떻게 진행되나요? 방문 수업도 가능한가요?', a: '코딩미는 1:1 화상 수업만 진행하며, 방문·대면 수업은 제공하지 않습니다. 화면 공유를 통해 실시간으로 코드를 함께 작성하고 확인하는 방식으로, 전국 어디서나 동일하게 수업받을 수 있습니다.' },
+  { q: '무료 시범수업은 어떻게 신청하나요?', a: '전화 또는 카카오톡으로 신청하시면 간단한 상담 후 무료 시범수업 일정을 잡아드립니다.' },
+];
 function faqMini() {
   return `<section>
   <div class="wrap" style="max-width:640px;">
     <div class="section-head"><h2>자주 묻는 질문</h2></div>
     <div class="faq-item open">
-      <div class="faq-q">수업은 어떻게 진행되나요? 방문 수업도 가능한가요?<span class="plus">+</span></div>
-      <div class="faq-a"><p>코딩미는 1:1 화상 수업만 진행하며, 방문·대면 수업은 제공하지 않습니다. 화면 공유를 통해 실시간으로 코드를 함께 작성하고 확인하는 방식으로, 전국 어디서나 동일하게 수업받을 수 있습니다.</p></div>
+      <div class="faq-q">${esc(FAQ_MINI_ITEMS[0].q)}<span class="plus">+</span></div>
+      <div class="faq-a"><p>${esc(FAQ_MINI_ITEMS[0].a)}</p></div>
     </div>
     <div class="faq-item">
-      <div class="faq-q">무료 시범수업은 어떻게 신청하나요?<span class="plus">+</span></div>
-      <div class="faq-a"><p>전화 또는 카카오톡으로 신청하시면 간단한 상담 후 무료 시범수업 일정을 잡아드립니다.</p></div>
+      <div class="faq-q">${esc(FAQ_MINI_ITEMS[1].q)}<span class="plus">+</span></div>
+      <div class="faq-a"><p>${esc(FAQ_MINI_ITEMS[1].a)}</p></div>
     </div>
   </div>
 </section>`;
+}
+function faqLd() {
+  return `<script type="application/ld+json">${JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: FAQ_MINI_ITEMS.map(item => ({
+      '@type': 'Question',
+      name: item.q,
+      acceptedAnswer: { '@type': 'Answer', text: item.a },
+    })),
+  })}</script>`;
+}
+function breadcrumbLd(items) {
+  return `<script type="application/ld+json">${JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items.map((item, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: item.name,
+      item: item.url,
+    })),
+  })}</script>`;
 }
 
 function regionPageTemplate(region, track) {
@@ -115,10 +144,18 @@ function regionPageTemplate(region, track) {
     ? region.districts.map(d => `<a href="/areas/${encodeURIComponent(districtSlug(region, d, track))}.html" style="display:block; padding:8px 0;">${region.name} ${baseName(d)} ${track.label}</a>`).join('\n          ')
     : '';
 
+  const breadcrumbItems = [
+    { name: '홈', url: `${SITE}/` },
+    { name: '지역별 코딩과외', url: `${SITE}/areas/` },
+    { name: `${region.name} ${track.label}`, url: canonical },
+  ];
+
   return `<!DOCTYPE html>
 <html lang="ko">
 <head>
 ${head(title, desc, canonical, keywords)}
+${breadcrumbLd(breadcrumbItems)}
+${faqLd()}
 </head>
 <body>
 ${header()}
@@ -174,10 +211,19 @@ function districtPageTemplate(region, district, track) {
   const hasSub = /\(.*\)$/.test(district);
   const subNote = hasSub ? district.match(/\((.*)\)$/)[1] : '';
 
+  const breadcrumbItems = [
+    { name: '홈', url: `${SITE}/` },
+    { name: '지역별 코딩과외', url: `${SITE}/areas/` },
+    { name: `${region.name} ${track.label}`, url: `${SITE}${parentUrl}` },
+    { name: district_, url: canonical },
+  ];
+
   return `<!DOCTYPE html>
 <html lang="ko">
 <head>
 ${head(title, desc, canonical, keywords)}
+${breadcrumbLd(breadcrumbItems)}
+${faqLd()}
 </head>
 <body>
 ${header()}
@@ -226,10 +272,16 @@ function hubTemplate() {
       </div>`;
   }).join('\n');
 
+  const breadcrumbItems = [
+    { name: '홈', url: `${SITE}/` },
+    { name: '지역별 코딩과외', url: `${SITE}/areas/` },
+  ];
+
   return `<!DOCTYPE html>
 <html lang="ko">
 <head>
 ${head('전국 지역별 코딩과외 전체 목록 | 코딩미', '전국 16개 광역지자체, 시/군/구, 자바스크립트·파이썬 트랙별 코딩미 화상 코딩과외 안내 페이지 모음입니다.', `${SITE}/areas/`, '전국 코딩과외, 지역별 코딩과외, 자바스크립트과외, 파이썬과외')}
+${breadcrumbLd(breadcrumbItems)}
 </head>
 <body>
 ${header()}
