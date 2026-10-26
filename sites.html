@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#1a1b3a">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/favicon.svg">
+<title>전체 사이트 모음 | 코딩미</title>
+<meta name="description" content="코딩미와 같은 운영팀이 전국 각 지역·과목별로 운영하는 1:1 과외 전문 사이트 18곳을 한 곳에 모았습니다. 필요한 지역·과목에 맞는 사이트를 바로 확인해보세요.">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="keywords" content="코딩미 관련 사이트, 과외 사이트 모음, 지역별 과외 사이트, 영어과외 사이트, 검정고시 사이트, 한글과외 사이트">
+<link rel="canonical" href="https://coding.me.kr/sites.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="코딩미">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:title" content="전체 사이트 모음 | 코딩미">
+<meta property="og:description" content="코딩미와 같은 운영팀이 전국 각 지역·과목별로 운영하는 1:1 과외 전문 사이트 18곳을 한 곳에 모았습니다.">
+<meta property="og:url" content="https://coding.me.kr/sites.html">
+<meta property="og:image" content="https://coding.me.kr/og-image.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "홈", "item": "https://coding.me.kr/"},
+    {"@type": "ListItem", "position": 2, "name": "전체 사이트 모음", "item": "https://coding.me.kr/sites.html"}
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1a1b3a;
+    --ink-2:#262755;
+    --paper:#f5f6fb;
+    --paper-2:#ffffff;
+    --cyan:#06b6d4;
+    --cyan-dark:#0891b2;
+    --cyan-light:#d6f5fb;
+    --violet:#6c5ce7;
+    --violet-light:#ece9fc;
+    --green:#22c55e;
+    --green-light:#dcfce7;
+    --slate:#5c6178;
+    --slate-2:#9498ab;
+    --line:#e3e5f0;
+    --line-dark:#33355e;
+    --radius:16px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Pretendard', -apple-system, sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{font-family:'Pretendard', sans-serif; font-weight:800; letter-spacing:-0.02em;}
+  .mono{font-family:'JetBrains Mono', monospace;}
+  a{color:inherit; text-decoration:none;}
+  button{font-family:inherit; cursor:pointer;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:1180px; margin:0 auto; padding:0 32px;}
+  :focus-visible{outline:2px solid var(--cyan); outline-offset:3px;}
+
+  /* ---------- Header ---------- */
+  header{
+    position:sticky; top:0; z-index:100;
+    background:rgba(245,246,251,0.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex; align-items:center; justify-content:space-between; height:76px;}
+  .logo{display:flex; align-items:center; gap:10px; font-weight:800; font-size:19px; color:var(--ink);}
+  .logo-mark{
+    width:36px; height:36px; border-radius:10px;
+    background:linear-gradient(135deg, var(--ink), var(--cyan-dark));
+    display:flex; align-items:center; justify-content:center;
+    color:var(--cyan-light); font-size:14px; font-weight:700;
+    font-family:'JetBrains Mono', monospace;
+  }
+  .nav-links{display:flex; gap:20px; font-size:13.5px; font-weight:600; color:var(--slate);}
+  .nav-links a{position:relative; padding:6px 0; white-space:nowrap;}
+  .nav-links a:hover{color:var(--ink);}
+  .nav-links a::after{
+    content:''; position:absolute; left:0; bottom:0; width:0; height:2px; border-radius:2px;
+    background:var(--cyan); transition:width .25s ease;
+  }
+  .nav-links a:hover::after{width:100%;}
+  .nav-cta{
+    display:flex; flex-direction:column; align-items:center; justify-content:center; gap:2px;
+    background:var(--ink); color:#fff; font-size:13.5px; font-weight:700; line-height:1.2;
+    padding:10px 20px; border:none; border-radius:10px; letter-spacing:0.01em;
+  }
+  .nav-cta-num{font-family:'JetBrains Mono', monospace; font-size:11px; font-weight:500; color:var(--cyan-light); letter-spacing:0;}
+  .nav-cta:hover{background:var(--ink-2);}
+  .nav-right{display:flex; align-items:center; gap:14px;}
+  .burger{
+    display:none; width:38px; height:38px; padding:0; border:none; background:transparent;
+    flex-direction:column; align-items:center; justify-content:center; gap:5px; flex-shrink:0;
+  }
+  .burger span{display:block; width:22px; height:2px; border-radius:2px; background:var(--ink); transition:transform .2s ease, opacity .2s ease;}
+  .burger.active span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+  .burger.active span:nth-child(2){opacity:0;}
+  .burger.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+  .mobile-nav{
+    display:none; flex-direction:column; background:var(--paper-2);
+    border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+  }
+  .mobile-nav.open{display:flex;}
+  .mobile-nav a{padding:17px 32px; font-size:15px; font-weight:700; color:var(--ink); border-bottom:1px solid var(--line);}
+  .mobile-nav a:last-child{border-bottom:none;}
+
+  /* ---------- Mobile sticky CTA bar ---------- */
+  .mobile-cta-bar{
+    display:none; position:fixed; left:0; right:0; bottom:0; z-index:200;
+    background:var(--paper-2); border-top:1px solid var(--line);
+    box-shadow:0 -6px 18px rgba(26,27,58,0.12);
+    padding:10px 14px calc(10px + env(safe-area-inset-bottom));
+    gap:10px;
+  }
+  .mobile-cta-bar a, .mobile-cta-bar button{
+    flex:1; display:flex; align-items:center; justify-content:center; gap:6px;
+    height:48px; font-size:14.5px; font-weight:700; border:none; border-radius:10px;
+  }
+  .mobile-cta-call{background:var(--ink); color:#fff;}
+  .mobile-cta-kakao{background:#FEE500; color:#191919;}
+  .mobile-cta-apply{background:var(--cyan); color:#fff;}
+
+  /* ---------- Section shared ---------- */
+  section{padding:92px 0;}
+  .section-head{max-width:640px; margin-bottom:52px;}
+  .section-head.center{max-width:660px; margin-left:auto; margin-right:auto; text-align:center;}
+  .eyebrow-line{display:flex; align-items:center; gap:10px; margin-bottom:16px;}
+  .section-head.center .eyebrow-line{justify-content:center;}
+  .eyebrow-line .bar{width:24px; height:3px; border-radius:2px; background:var(--cyan);}
+  .eyebrow-line span{font-size:13px; font-weight:700; color:var(--cyan-dark); letter-spacing:0.08em; font-family:'JetBrains Mono', monospace;}
+  .section-head h2{font-size:32px; line-height:1.4; color:var(--ink);}
+  .section-head p{font-size:15px; color:var(--slate); margin-top:14px;}
+
+  .fact-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:16px; max-width:960px; margin:0 auto;}
+  .fact-card{background:var(--paper); border:1px solid var(--line); border-radius:var(--radius); padding:26px 24px; position:relative;}
+  .fact-year{font-family:'JetBrains Mono', monospace; font-size:13px; font-weight:700; color:var(--cyan-dark); margin-bottom:10px;}
+  .fact-card h3{font-size:16px; margin-bottom:8px; color:var(--ink);}
+  .fact-card p{font-size:13.5px; color:var(--slate); line-height:1.7;}
+
+  /* ---------- Footer ---------- */
+  footer{background:var(--ink); color:#9a9dc2; padding:56px 0 28px;}
+  .foot-grid{display:grid; grid-template-columns:1.2fr 1fr 1fr 1fr; gap:40px; margin-bottom:40px;}
+  .foot-logo{font-size:19px; font-weight:800; color:#fff; margin-bottom:14px;}
+  .foot-grid p{font-size:13px; line-height:1.8;}
+  .foot-col h4{font-size:13px; color:#fff; margin-bottom:16px; font-weight:700;}
+  .foot-col a{display:block; font-size:13px; margin-bottom:10px; color:#9a9dc2;}
+  .foot-col a:hover{color:var(--cyan-light);}
+  .foot-keywords{border-top:1px solid var(--line-dark); padding:22px 0; font-size:12px; line-height:2;}
+  .foot-keywords b{color:#e3e5f5; font-weight:600; margin-right:8px;}
+  .foot-bottom{border-top:1px solid var(--line-dark); padding-top:22px; font-size:12px; display:flex; justify-content:space-between;}
+
+  /* ---------- Responsive ---------- */
+  @media (max-width:900px){
+    body{padding-bottom:70px;}
+    .nav-links{display:none;}
+    .burger{display:flex;}
+    .mobile-cta-bar{display:flex;}
+    section{padding:60px 0;}
+    .section-head{margin-bottom:32px;}
+    .fact-grid{grid-template-columns:1fr;}
+    .foot-grid{grid-template-columns:1fr 1fr; row-gap:28px;}
+  }
+  @media (max-width:640px){
+    .wrap{padding:0 20px;}
+    .nav{height:64px;}
+    section{padding:44px 0;}
+    .section-head h2{font-size:25px;}
+    .foot-grid{grid-template-columns:1fr;}
+    .foot-bottom{flex-direction:column; gap:6px; align-items:flex-start;}
+  }
+
+  /* ---------- Subpage: breadcrumb & page hero ---------- */
+  .breadcrumb{max-width:1180px; margin:0 auto; padding:16px 32px; font-size:12.5px; color:var(--slate-2);}
+  .breadcrumb a{color:var(--slate-2);}
+  .breadcrumb a:hover{color:var(--cyan-dark);}
+  .breadcrumb .sep{margin:0 6px;}
+  .page-hero{background:var(--ink); color:#fff; position:relative; overflow:hidden; padding:52px 0 64px;}
+  .page-hero::after{content:''; position:absolute; inset:-12px; background:url('/assets/hero-bg.jpg') center/cover no-repeat; filter:blur(5px) brightness(0.5) saturate(1.1); z-index:0;}
+  .page-hero::before{content:''; position:absolute; inset:0; z-index:1; background:radial-gradient(ellipse 600px 400px at 85% 10%, rgba(6,182,212,0.22), transparent 60%); pointer-events:none;}
+  .page-hero .wrap{position:relative; z-index:2;}
+  .page-hero h1{font-size:34px; line-height:1.38; color:#fff; margin-bottom:16px; max-width:720px;}
+  .page-hero h1 em{font-style:normal; color:var(--cyan-light);}
+  .page-hero p{font-size:15px; color:#c4c6e0; max-width:600px; margin-bottom:26px;}
+  @media (max-width:640px){ .breadcrumb{padding:16px 20px;} .page-hero h1{font-size:25px;} }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="/"><span class="logo-mark">&lt;/&gt;</span>코딩미</a>
+    <nav class="nav-links">
+      <a href="/#why-necessary">왜 필수인가</a>
+      <a href="/#process">진행 방식</a>
+      <a href="/#track-js">자바스크립트</a>
+      <a href="/#track-py">파이썬</a>
+      <a href="/elementary.html">초등</a>
+      <a href="/middle.html">중학</a>
+      <a href="/high.html">고등</a>
+      <a href="/#news">뉴스</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/sites.html">전체 사이트</a>
+    </nav>
+    <div class="nav-right">
+      <a class="nav-cta" href="tel:010-3951-0535">무료 시범수업<span class="nav-cta-num">010-3951-0535</span></a>
+      <button class="burger" id="burgerBtn" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobileNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="/#why-necessary">왜 필수인가</a>
+    <a href="/#process">진행 방식</a>
+    <a href="/#track-js">자바스크립트</a>
+    <a href="/#track-py">파이썬</a>
+    <a href="/elementary.html">초등코딩</a>
+    <a href="/middle.html">중학코딩</a>
+    <a href="/high.html">고등코딩</a>
+    <a href="/#news">뉴스</a>
+    <a href="/#faq">FAQ</a>
+    <a href="https://kukje-gwaoe.co.kr/" target="_blank" rel="noopener">국제학교전문과외</a>
+    <a href="/sites.html">전체 사이트</a>
+  </nav>
+</header>
+
+<div class="mobile-cta-bar">
+  <a class="mobile-cta-call" href="tel:010-3951-0535">☎ 전화</a>
+  <a class="mobile-cta-kakao" href="https://open.kakao.com/o/sOXeVnpi" target="_blank" rel="noopener">💬 카톡</a>
+  <a class="mobile-cta-apply" href="/#apply">무료체험</a>
+</div>
+
+<div class="breadcrumb"><a href="/">홈</a><span class="sep">/</span><span>전체 사이트 모음</span></div>
+
+<section class="page-hero">
+  <div class="wrap">
+    <h1>전체 사이트 모음</h1>
+    <p>코딩미는 전국 각 지역과 과목별로 1:1 과외를 전문으로 운영하는 사이트들과 같은 운영팀이 함께 관리하는 네트워크입니다. 필요한 지역·과목에 맞는 사이트를 아래에서 바로 확인해보세요.</p>
+  </div>
+</section>
+
+<section id="sites">
+  <div class="wrap">
+    <div class="section-head center">
+      <div class="eyebrow-line"><span class="bar"></span><span>SISTER SITES</span></div>
+      <h2>18개 지역·과목별 사이트</h2>
+    </div>
+    <div class="fact-grid">
+      <div class="fact-card" style="border:2px solid var(--cyan);">
+        <span style="position:absolute; top:14px; right:14px; background:var(--cyan); color:#fff; font-size:11px; font-weight:700; padding:3px 8px; border-radius:999px;">현재 사이트</span>
+        <div class="fact-year">📍</div>
+        <h3>코딩</h3>
+        <p>coding.me.kr</p>
+      </div>
+      <a class="fact-card" href="https://kukje-gwaoe.co.kr/" target="_blank" rel="noopener">
+        <div class="fact-year">🔗</div>
+        <h3>국제학교</h3>
+        <p>kukje-gwaoe.co.kr</p>
+      </a>
+      <a class="fact-card" href="https://shcool123.co.kr/" target="_blank" rel="noopener">
+        <div class="fact-year">🔗</div>
+        <h3>과외</h3>
+        <p>shcool123.co.kr</p>
+      </a>
+      <a class="fact-card" href="https://study123.co.kr/" target="_blank" rel="noopener">
+        <div class="fact-year">🔗</div>
+        <h3>검정고시</h3>
+        <p>study123.co.kr</p>
+      </a>
+      <a class="fact-card" href="https://englisheasy.co.kr/" target="_blank" rel="noopener">
+        <div class="fact-year">🔗</div>
+        <h3>파워</h3>
+        <p>englisheasy.co.kr</p>
+      </a>
+      <a class="fact-card" href="https://startse.co.kr/" target="_blank" rel="noopener">
+        <div class="fact-year">🔗</div>
+        <h3>한글</h3>
+        <p>startse.co.kr</p>
+      </a>
+      <a class="fact-card" href="https://extracurricular.co.kr/" target="_blank" rel="noopener">
+        <div class="fact-year">🔗</div>
+        <h3>강진과외</h3>
+        <p>extracurricular.co.kr</p>
+      </a>
+      <a class="fact-card" href="https://privatelesson.co.kr/" target="_blank" rel="noopener">
+        <div class="fact-year">🔗</div>
+        <h3>강릉과외</h3>
+        <p>privatelesson.co.kr</p>
+      </a>
+      <a class="fact-card" href="https://easyiil.co.kr/" target="_blank" rel="noopener">
+        <div class="fact-year">🔗</div>
+        <h3>홍성과외</h3>
+        <p>easyiil.co.kr</p>
+      </a>
+      <a class="fact-card" href="https://easysss.co.kr/" target="_blank" rel="noopener">
+        <div class="fact-year">🔗</div>
+        <h3>진주산청과외</h3>
+        <p>easysss.co.kr</p>
+      </a>
+      <a class="fact-card" href="https://class-plus.co.kr/" target="_blank" rel="noopener">
+        <div class="fact-year">🔗</div>
+        <h3>영암과외</h3>
+        <p>class-plus.co.kr</p>
+      </a>
+      <a class="fact-card" href="https://study-fit.co.kr/" target="_blank" rel="noopener">
+        <div class="fact-year">🔗</div>
+        <h3>김해과외</h3>
+        <p>study-fit.co.kr</p>
+      </a>
+      <a class="fact-card" href="https://1on1-edu.co.kr/" target="_blank" rel="noopener">
+        <div class="fact-year">🔗</div>
+        <h3>나주과외</h3>
+        <p>1on1-edu.co.kr</p>
+      </a>
+      <a class="fact-card" href="https://my-teacher.co.kr/" target="_blank" rel="noopener">
+        <div class="fact-year">🔗</div>
+        <h3>전주과외</h3>
+        <p>my-teacher.co.kr</p>
+      </a>
+      <a class="fact-card" href="https://ssam-pick.co.kr/" target="_blank" rel="noopener">
+        <div class="fact-year">🔗</div>
+        <h3>안동과외</h3>
+        <p>ssam-pick.co.kr</p>
+      </a>
+      <a class="fact-card" href="https://study-bridge.co.kr/" target="_blank" rel="noopener">
+        <div class="fact-year">🔗</div>
+        <h3>경주과외</h3>
+        <p>study-bridge.co.kr</p>
+      </a>
+      <a class="fact-card" href="https://ssam-hub.co.kr/" target="_blank" rel="noopener">
+        <div class="fact-year">🔗</div>
+        <h3>영천과외</h3>
+        <p>ssam-hub.co.kr</p>
+      </a>
+      <a class="fact-card" href="https://gwaoe-moa.co.kr/" target="_blank" rel="noopener">
+        <div class="fact-year">🔗</div>
+        <h3>영주과외</h3>
+        <p>gwaoe-moa.co.kr</p>
+      </a>
+    </div>
+    <p style="margin-top:28px; text-align:center; font-size:13.5px; color:var(--slate);">
+      위 사이트들은 모두 같은 운영팀이 관리하며, 거주 지역이나 필요한 과목이 맞지 않는 경우 다른 사이트에서 상담받으실 수 있습니다.
+    </p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-logo">코딩미</div>
+        <p>자바스크립트로 앱·게임을 만들고 파이썬으로 데이터를 분석하는<br>초중고 1:1 코딩 수업 코딩미입니다.</p>
+      </div>
+      <div class="foot-col">
+        <h4>바로가기</h4>
+        <a href="/#why-necessary">왜 필수인가</a>
+        <a href="/#process">진행 방식</a>
+        <a href="/#track-js">자바스크립트</a>
+        <a href="/#track-py">파이썬</a>
+        <a href="/elementary.html">초등코딩과외</a>
+        <a href="/middle.html">중학코딩과외</a>
+        <a href="/high.html">고등코딩과외</a>
+        <a href="/#news">뉴스</a>
+        <a href="/#faq">FAQ</a>
+        <a href="/areas/">지역별 코딩과외</a>
+      </div>
+      <div class="foot-col">
+        <h4>고객센터</h4>
+        <a href="tel:010-3951-0535">010-3951-0535</a>
+        <a href="mailto:hasa21@naver.com">hasa21@naver.com</a>
+        <a href="https://open.kakao.com/o/sOXeVnpi" target="_blank" rel="noopener">카카오톡 문의</a>
+      </div>
+      <div class="foot-col">
+        <h4>관련 사이트</h4>
+        <a href="https://kukje-gwaoe.co.kr/" target="_blank" rel="noopener">국제학교전문과외 (국제학교 전문)</a>
+        <a href="/sites.html">전체 사이트 모음</a>
+      </div>
+    </div>
+    <div class="foot-keywords">
+      <p><b>코딩 트랙</b>자바스크립트(웹·게임·앱) · 파이썬(데이터분석·AI)</p>
+      <p><b>대상</b>초등 저학년 · 초등 고학년 · 중학생 · 고등학생</p>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 코딩미. All rights reserved.</span>
+      <span>전국 서비스(화상) · 상담 평일 10:00–20:00</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ---------- Mobile nav toggle ---------- */
+(function(){
+  const burgerBtn = document.getElementById('burgerBtn');
+  const mobileNav = document.getElementById('mobileNav');
+  burgerBtn.addEventListener('click', () => {
+    const isOpen = mobileNav.classList.toggle('open');
+    burgerBtn.classList.toggle('active', isOpen);
+    burgerBtn.setAttribute('aria-expanded', isOpen);
+  });
+  mobileNav.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      mobileNav.classList.remove('open');
+      burgerBtn.classList.remove('active');
+      burgerBtn.setAttribute('aria-expanded', 'false');
+    });
+  });
+})();
+</script>
+</body>
+</html>
